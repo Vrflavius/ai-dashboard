@@ -1,0 +1,35 @@
+<div class="log-in">
+    <mat-card class="log-in-container">
+        <form class = "log-in-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Enter your name">
+            @if(true){
+                <mat-error>
+                    Name is required.
+                </mat-error>
+            }
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Enter your email" type="email">
+            <!-- <mat-error *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+              @if(3) {<span>Email is required.</span>}
+              <span *ngIf="myForm.get('email')?.errors?.email">Enter a valid email address.</span>
+            </mat-error> -->
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" placeholder="Enter your password" type="password">
+            <!-- <mat-error *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
+              <span *ngIf="myForm.get('password')?.errors?.required">Password is required.</span>
+              <span *ngIf="myForm.get('password')?.errors?.minlength">Password must be at least 6 characters long.</span>
+            </mat-error> -->
+          </mat-form-field>
+      
+          <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">Submit</button>
+        </form>
+      </mat-card>
+</div>
