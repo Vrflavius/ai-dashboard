@@ -1,0 +1,106 @@
+:host{
+    .app-header {
+        background-color: #1b2a47; // Dark navy blue background
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+
+        .right-header{
+          display: flex;
+          gap: 3rem;
+          align-items: center;
+          color: white;
+        }
+      
+        .logo {
+          font-size: 24px;
+          font-weight: 700;
+          color: #ffffff;
+      
+          .brand {
+            color: #3db0b9; // Cyan color for "Admin"
+          }
+        }
+      
+        .search-bar {
+          position: relative;
+          input {
+            width: 300px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: none;
+            background-color: #2a3b58;
+            color: #ffffff;
+            font-size: 14px;
+      
+            &::placeholder {
+              color: #98a4c1; // Light placeholder color
+            }
+          }
+        }
+      
+        .user-info {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          color: #ffffff;
+          font-size: 14px;
+      
+
+
+          .notification-icon {
+            position: relative;
+            display: inline-block;
+          
+            .fa-bell {
+              font-size: 20px;
+              color: #fff;
+              position: relative;
+              z-index: 10;
+            }
+            .badge-container{
+              height: 17px;
+              width: 12px;
+              position: absolute;
+              top: -8px;
+              right: -23px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 4px 8px;
+              border: 1px solid red;
+            }
+            .badge {
+              background: radial-gradient(circle, rgb(255 66 66 / 80%) 30%, rgba(186, 85, 211, 0.5) 70%, rgba(128, 0, 128, 0.9) 100%);
+              color: #ffffff;
+              border-radius: 50%;
+              padding: 4px 8px;
+              font-size: 12px;
+              font-weight: bold;
+              height: 9px;
+              width: 1px;
+            }
+          }
+          a {
+            color: #3db0b9;
+            text-decoration: none;
+            margin-right: 15px;
+          }
+      
+          .user-avatar {
+            img {
+              border-radius: 50%;
+              width: 45px;
+              height: 45px;
+              border: 2px solid #ffffff;
+            }
+          }
+        }
+    }
+    .body{
+      
+    }
+}

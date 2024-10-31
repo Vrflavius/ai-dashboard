@@ -1,0 +1,34 @@
+:host{
+    .menu{
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-item{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* padding: 5px 12px; */
+        background: #252581;
+        gap: 2rem;
+        color: white;
+    }
+
+    .menu-item:hover{
+        background: #5656b8;
+    }
+
+    .item{
+        margin-left: 4rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .is-Selected{
+        background-color: #05c98b !important;
+    }
+}
