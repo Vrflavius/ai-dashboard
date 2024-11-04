@@ -2,18 +2,18 @@
     <mat-card class="log-in-container">
         <form class = "log-in-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
           <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput formControlName="name" placeholder="Enter your name">
-            @if(true){
-                <mat-error>
-                    Name is required.
-                </mat-error>
-            }
-          </mat-form-field>
-      
-          <mat-form-field appearance="fill">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" placeholder="Enter your email" type="email">
+            @if(myForm.get('email')?.errors?.['required']){
+                <mat-error>
+                    Email is required
+                </mat-error>
+            }
+            @else if(myForm.get('email')?.errors?.['email']){
+                <mat-error>
+                    Email format is not coresponding
+                </mat-error>
+            }
             <!-- <mat-error *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
               @if(3) {<span>Email is required.</span>}
               <span *ngIf="myForm.get('email')?.errors?.email">Enter a valid email address.</span>
