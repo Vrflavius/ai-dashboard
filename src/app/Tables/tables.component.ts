@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     standalone: true
 })
 
-export class Tables implements OnInit {
+export class TablesComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }

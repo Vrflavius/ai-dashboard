@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     standalone: true
 })
 
-export class Dashboard implements OnInit {
+export class DashboardComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
